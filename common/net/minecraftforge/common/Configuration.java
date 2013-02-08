@@ -675,7 +675,6 @@ public class Configuration
                 BufferedWriter buffer = new BufferedWriter(new OutputStreamWriter(fos, defaultEncoding));
 
                 buffer.write("# Configuration file" + NEW_LINE);
-                buffer.write("# Generated on " + DateFormat.getInstance().format(new Date()) + NEW_LINE + NEW_LINE);
 
                 if (children.isEmpty())
                 {
