@@ -50,11 +50,12 @@ def main():
 
     print '=================================== Release Start ================================='
     
-    fml = glob.glob(os.path.join(forge_dir, 'fml', 'target', 'fml-src-*.%d-*.zip' % build_num))
+    fml = glob.glob(os.path.join(forge_dir, 'fml', 'target', 'fml-src-*.zip')) 
     if not len(fml) == 1:
         if len(fml) == 0:
             print 'Missing FML source zip, should be named fml-src-*.zip inside ./fml/target/ created when running setup'
         else:
+            print fml
             print 'To many FML source zips found, we should only have one. Check the Forge Git for the latest FML version supported'
         sys.exit(1)
     
