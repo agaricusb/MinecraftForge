@@ -69,11 +69,11 @@
  
          if (villagecollection == null)
 @@ -208,7 +244,7 @@
-             this.villageCollectionObj.func_82566_a(this);
+             this.villageCollectionObj = villagecollection; this.villageCollectionObj.func_82566_a(this);
          }
  
 -        par3WorldProvider.registerWorld(this);
-+        this.provider.registerWorld(this);
++        /* Guarantee the dimension ID was not reset by the provider */ int providerDim = this.provider.dimensionId; this.provider.registerWorld(this); this.provider.dimensionId = providerDim;
          this.chunkProvider = this.createChunkProvider();
          this.calculateInitialSkylight();
          this.calculateInitialWeather();
